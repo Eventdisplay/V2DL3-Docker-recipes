@@ -57,15 +57,13 @@ docker push gernotmaier/v2dl3-eventdisplay:v0.2.0-eventdisplay-refactoring
 
 Build a singularity image, as required for many HEP computing environments.
 
-1. Upload to docker hub (see previous sections
-
-2. Convert Docker image to Singularity
+1. Pull and convert Docker image to Singularity
 
 ```
 singularity pull docker://gernotmaier/v2dl3-eventdisplay:v0.2.0-eventdisplay-refactoring
 ```
 
-3. Test the singularity container in bash mode
+2. Test the singularity container in bash mode
 
 ```
 singularity exec -e --bind $(PWD)/data:/data v2dl3-eventdisplay_v0.2.0-eventdisplay-refactoring.sif bash
@@ -73,7 +71,8 @@ micromamba activate v2dl3-ed
 python /workdir/V2DL3/pyV2DL3/script/v2dl3_for_Eventdisplay.py --help
 ```
 
-4. Run an example analysis:
+3. Run an example analysis:
+
 (expecting the data files in the ./data/ directory)
 ```
  python /workdir/V2DL3/pyV2DL3/script/v2dl3_for_Eventdisplay.py -f /data/64080.anasum.root \
