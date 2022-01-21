@@ -65,10 +65,19 @@ Build a singularity image, as required for many HEP computing environments.
 singularity pull docker://gernotmaier/v2dl3-eventdisplay:v0.2.0-eventdisplay-refactoring
 ```
 
-3. Test the singularity container
+3. Test the singularity container in bash mode
+
 ```
-singularity exec -e --bind $(PWD)/data:/data v2dl3-eventdisplay.sif \
-                                  python V2DL3/pyV2DL3/script/v2dl3_for_Eventdisplay.py \
-                                  -f  /data/64080.anasum.root \
-                                  /data/effArea-v486-auxv01-CARE_June2020-Cut-NTel2-PointSource-Moderate-TMVA-BDT-GEO-V6_2012_2013a-ATM62-T1234.root \
+singularity exec -e --bind $(PWD)/data:/data v2dl3-eventdisplay_v0.2.0-eventdisplay-refactoring.sif bash
+micromamba activate v2dl3-ed
+python /workdir/V2DL3/pyV2DL3/script/v2dl3_for_Eventdisplay.py --help
 ```
+
+4. Run an example analysis:
+(expecting the data files in the ./data/ directory)
+```
+ python /workdir/V2DL3/pyV2DL3/script/v2dl3_for_Eventdisplay.py -f /data/64080.anasum.root \
+                                                                   /data/effArea-v486-auxv01-CARE_June2020-Cut-NTel2-PointSource-Moderate-TMVA-BDT-GEO-V6_2012_2013a-ATM62-T1234.root  \
+                                                                   /data/test.fits.gz
+ ```
+
