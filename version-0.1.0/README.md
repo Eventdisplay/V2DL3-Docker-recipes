@@ -1,5 +1,9 @@
 # V2DL3 Docker recipe for V2DL3 version 0.1.0
 
+Recipe for [V2DL3 release version 0.1.0](https://github.com/VERITAS-Observatory/V2DL3/releases/tag/v0.1.0).
+
+This recipe is different than for all the newer versions, as ROOT is required.
+
 ## Building
 
 ```
