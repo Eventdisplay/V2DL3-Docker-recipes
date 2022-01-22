@@ -48,8 +48,8 @@ docker run --rm -it -v "$(pwd)/data:/data" v2dl3-eventdisplay \
 
 e.g.:
 ```
-docker tag 396165de13d9 gernotmaier/v2dl3-eventdisplay:v0.2.0-eventdisplay-refactoring
-docker push gernotmaier/v2dl3-eventdisplay:v0.2.0-eventdisplay-refactoring
+docker tag 396165de13d9 gernotmaier/v2dl3-eventdisplay:v0.2.0-v01
+docker push gernotmaier/v2dl3-eventdisplay:v0.2.0-v01
 
 ```
 
@@ -60,13 +60,13 @@ Build a singularity image, as required for many HEP computing environments.
 1. Pull and convert Docker image to Singularity
 
 ```
-singularity pull docker://gernotmaier/v2dl3-eventdisplay:v0.2.0-eventdisplay-refactoring
+singularity pull docker://gernotmaier/v2dl3-eventdisplay:v0.2.0-v01
 ```
 
 2. Test the singularity container in bash mode
 
 ```
-singularity exec -e --bind $(PWD)/data:/data v2dl3-eventdisplay_v0.2.0-eventdisplay-refactoring.sif bash
+singularity exec -e --bind $(PWD)/data:/data v2dl3-eventdisplay_v0.2.0-v01.sif bash
 micromamba activate v2dl3-ed
 python /workdir/V2DL3/pyV2DL3/script/v2dl3_for_Eventdisplay.py --help
 ```

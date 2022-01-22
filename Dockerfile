@@ -12,7 +12,7 @@ RUN micromamba install -y -f /tmp/env.yaml && \
 ARG MAMBA_DOCKERFILE_ACTIVATE=1
 
 ARG GITHUBTOKEN
-ARG V2DL3VERSION="eventdisplay-refactoring"
+ARG V2DL3VERSION="0.2.0-dev"
 RUN git clone --depth 1 --branch $V2DL3VERSION https://$GITHUBTOKEN@github.com/VERITAS-Observatory/V2DL3.git
 
 RUN micromamba env create -y -f V2DL3/environment-eventdisplay.yml && \
