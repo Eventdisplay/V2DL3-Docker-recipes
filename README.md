@@ -3,7 +3,7 @@
 V2DL3 is a tool to convert VERITAS data products to DL3 Fits format. 
 This repository provides Docker recipes for converting Eventdisplay data files.
 
-The V2DL3 software is available from [here](https://github.com/VERITAS-Observatory/V2DL3) (unfortunatly private software)
+The V2DL3 software is available from [here](https://github.com/VERITAS-Observatory/V2DL3).
 
 ## Building
 
