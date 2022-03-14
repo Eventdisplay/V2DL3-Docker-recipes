@@ -11,7 +11,6 @@ RUN micromamba install -y -f /tmp/env.yaml && \
 
 ARG MAMBA_DOCKERFILE_ACTIVATE=1
 
-ARG GITHUBTOKEN
 ARG V2DL3VERSION="v0.2.1"
 RUN git clone --depth 1 --branch $V2DL3VERSION https://github.com/VERITAS-Observatory/V2DL3.git
 
