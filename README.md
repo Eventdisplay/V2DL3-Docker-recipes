@@ -11,8 +11,6 @@ The V2DL3 software is available from [here](https://github.com/VERITAS-Observato
 $ docker build -t v2dl3-eventdisplay .
 ```
 
-Your GitHub token is required, as the V2DL3 GitHub repository is a private repository.
-
 ## Running
 
 All examples in the following expect that the Eventdisplay data files (anasum.root and effective area files)
